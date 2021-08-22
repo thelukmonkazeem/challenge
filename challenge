@@ -1,0 +1,58 @@
+
+package challenge;
+
+import java.util.Scanner;
+
+
+public class PerfectSquareCount {
+  
+    public static int perfectSquare(int p){
+        
+        int psquare=(int)Math.sqrt(p);
+        if(psquare*psquare==p){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+public static void main(String[] args) {
+        
+        int n;
+        
+        Scanner getInput=new Scanner(System.in);
+        System.out.println("Enter number of test cases: ");
+        n=getInput.nextInt();
+        
+         int l,w;
+         
+        
+         int gridSum[]=new int[n];
+         for (int i=0; i<n; i++){
+            
+            System.out.print("Enter Length for case "+(i)+"\t");
+            l=getInput.nextInt();
+            
+            System.out.print("Enter Width for case "+(i)+"\t");
+            w=getInput.nextInt();
+            
+                 
+            
+                 gridSum[i]=(l*(l+1)*(2*w+1)/6);
+            
+            
+           
+           
+       }
+        
+        
+          for(int i=0; i<n;i++){
+                 
+              System.out.println(gridSum[i]);
+
+          }
+        
+        
+        
+    }
+ 
+}
